@@ -1,4 +1,11 @@
 
+## Preparation
+
+```
+npm install -g npm@5.8.0
+npm install -g pnpm@1.40.1
+```
+
 ## Design goals
 
  * Support docker-based CI -- fast builds at source changes.
@@ -6,8 +13,6 @@
  * Support [build-contract](https://github.com/Yolean/build-contract) for local testing
    -- again fast builds at source changes.
  * Support monorepo, `file:../[path from repo root]` dependencies in `package.json`
-
-
 
 ## Use package-lock.json for prod install
 
