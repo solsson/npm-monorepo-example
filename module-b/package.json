@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node ./index.spec.js",
+    "prepare": "ehco 'Prepare! Here we tend to do important stuff like transpile.'",
     "preshrinkwrap": "echo 'Pre-shrinkwrap B!'",
     "shrinkwrap": "echo 'Shrinkwrap B!'",
     "postshrinkwrap": "echo 'Post-shrinkwrap B!'"
