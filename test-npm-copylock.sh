@@ -5,30 +5,32 @@ mkdir -p npm-locks.tmp/module-a npm-locks.tmp/module-b npm-locks.tmp/module-c
 
 function clean {
   MODULE=$(basename $PWD)
-  if [ $PWD = *"npm-locks.tmp"* ]; then
+  [[ "$PWD" =~ npm-locks.tmp ]] && {
     mv package-lock.json ../../$MODULE/
     cd ../../$MODULE/
-  fi
+  }
+  rm package-lock.json
   cp package.json ../npm-locks.tmp/$MODULE/
   cd ../npm-locks.tmp/$MODULE/
 }
 
 cd module-c
 clean
-npm install --production --package-lock-only
+npm install --production --package-lock-only --ignore-scripts
 cd ../module-b
 clean
-npm install --production --package-lock-only
+npm install --production --package-lock-only --ignore-scripts
 cd ../module-a
 clean
-npm install --production --package-lock-only
-cd ../
+npm install --production --package-lock-only --ignore-scripts
 
-if [ $PWD = *"npm-locks.tmp"* ]; then
+[[ "$PWD" =~ npm-locks.tmp ]] && {
   mv package-lock.json ../../$MODULE/
   cd ../../$MODULE/
-fi
-#m -r npm-locks.tmp
+}
+rm -r npm-locks.tmp
+
+cd ../
 
 cd module-c
 pnpm install
