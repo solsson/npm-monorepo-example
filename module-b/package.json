@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./index.spec.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "queue": "4.4.2",
-    "module-c": "../module-c"
+    "module-c": "file:../module-c",
+    "walker": "1.0.7"
+  },
+  "devDependencies": {
+    "wrappy": "1.0.2"
   }
 }
