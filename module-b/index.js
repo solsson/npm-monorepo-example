@@ -11,7 +11,7 @@ try {
 
 module.exports = function run(cb) {
   w.on('end', () => {
-    console.log('module-b async end at', c.now);
+    console.log('module-b async end for', c.now);
     cb();
   });
 }
