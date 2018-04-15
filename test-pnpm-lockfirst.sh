@@ -38,6 +38,6 @@ cd module-c && npm test
 [ $? -ne 0 ] && echo "Dev failed in leaf module" && exit 1
 cd ..
 
-cd module-c && npm test
+cd module-b && npm test
 [ $? -ne 0 ] && echo "Dev failed in middle module" && exit 1
 cd ..
