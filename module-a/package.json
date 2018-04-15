@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "node ./index.spec.js",
-    "preshrinkwrap": "node -e \"let fs = require('fs'); fs.renameSync('./package.json','./package.1.json'); let p = require('./package.1.json'); delete p.devDependencies;fs.writeFileSync('./package.json', JSON.stringify(p,null,'  '));\"",
-    "shrinkwrap": "echo 'Shrinkwrap!' && cat package-lock.json || echo 'No package-lock.json'",
-    "postshrinkwrap": "echo 'Postschrinkwrap!' && mv package.1.json package.json"
+    "preshrinkwrap": "echo 'Pre-shrinkwrap!'",
+    "shrinkwrap": "echo 'Shrinkwrap!'",
+    "postshrinkwrap": "echo 'Post-shrinkwrap!'"
   },
   "author": "",
   "license": "ISC",
