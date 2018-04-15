@@ -13,6 +13,11 @@ npm install -g pnpm@1.40.1
  * Support [build-contract](https://github.com/Yolean/build-contract) for local testing
    -- again fast builds at source changes.
  * Support monorepo, `file:../[path from repo root]` dependencies in `package.json`
+ * It _is_ a feature that our builds will only pass with a good package-lock.json,
+   and that we have to run its diffs through PRs, because the introduction of new
+   prod dependencies should not be taken lightly.
+ * It is also a fature that we don't get all dev dependencies in package-lock.json,
+   assuming (as above) that builds are properly sandboxed so we don't need to review libs.
 
 ## Use package-lock.json for prod install
 
