@@ -25,4 +25,4 @@ cd ../
 
 cat module-a/package-lock.json | grep '": {'
 cat module-a/package-lock.json | grep '": {' | grep '"yn"'
-[ $? -eq 0 ] && echo "Failed: package-lock.json contains a top level dev dependency"
+[ $? -eq 0 ] && echo "Failed: package-lock.json contains a top level dev dependency" && exit 1

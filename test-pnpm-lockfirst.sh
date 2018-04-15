@@ -28,8 +28,16 @@ cd ../
 
 cat module-a/package-lock.json | grep '": {'
 cat module-a/package-lock.json | grep '": {' | grep '"yn"'
-[ $? -eq 0 ] && echo "Failed: package-lock.json contains a top level dev dependency"
+[ $? -eq 0 ] && echo "Failed: package-lock.json contains a top level dev dependency" && exit 1
 
 cat module-a/package-lock.json | grep '": {'
 cat module-a/package-lock.json | grep '": {' | grep '"wrappy"'
-[ $? -eq 0 ] && echo "Failed: package-lock.json contains a monorepo dependency's dev dependency"
+[ $? -eq 0 ] && echo "Failed: package-lock.json contains a monorepo dependency's dev dependency" && exit 1
+
+cd module-c && npm test
+[ $? -ne 0 ] && echo "Dev failed in leaf module" && exit 1
+cd ..
+
+cd module-c && npm test
+[ $? -ne 0 ] && echo "Dev failed in middle module" && exit 1
+cd ..
