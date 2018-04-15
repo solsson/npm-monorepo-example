@@ -1,3 +1,6 @@
+const b = require('module-b');
+const abbrev = require('abbrev');
+
 const http = require('http');
 const port = 31234;
 

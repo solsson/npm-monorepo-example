@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "-interesting1": "https://github.com/Microsoft/web-build-tools/wiki/Rush-%7E-NPM-vs-PNPM-vs-Yarn#how-to-tell-rush-which-package-manager-to-use",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node ./index.spec.js",
     "preshrinkwrap": "node -e \"let fs = require('fs'); fs.renameSync('./package.json','./package.1.json'); let p = require('./package.1.json'); delete p.devDependencies;fs.writeFileSync('./package.json', JSON.stringify(p,null,'  '));\"",
     "shrinkwrap": "echo 'Shrinkwrap!' && cat package-lock.json || echo 'No package-lock.json'",
     "postshrinkwrap": "echo 'Postschrinkwrap!' && mv package.1.json package.json"
