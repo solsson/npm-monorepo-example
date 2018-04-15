@@ -1,0 +1,19 @@
+version: "2"
+services:
+
+  testscript:
+    build:
+      context: ../
+      dockerfile: build-contracts/dev-debian/Dockerfile
+    labels:
+      com.yolean.build-contract: ""
+    entrypoint: ./test.sh
+
+  # Note that we must have some tooling for monorepo around the docker build
+  # That tooling tends to be build-contract, but could be something ligther using only custom npm hooks
+  example-service-build:
+    labels:
+      com.yolean.build-target: ""
+    build:
+      context: ../
+      dockerfile: build-contracts/sample-build/Dockerfile
