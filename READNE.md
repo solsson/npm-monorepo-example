@@ -30,3 +30,8 @@ We run `npm install --no-package-lock` for local development.
 Two problems with npm install for monorepo: slowness + disk usage.
 We might evaluate [pnpm](https://github.com/pnpm/pnpm) which by the way has its own schrinkwrap,
 or even [rusn](https://www.npmjs.com/package/@microsoft/rush) or you name it.
+
+## Prod install during docker build
+
+With monorepo you can't have the entire repo as build context, as the context transfer would make all builds slow.
+This means that `file:../` dependencies need to be packaged to a location inside the top level module's folder.

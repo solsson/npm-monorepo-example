@@ -1,0 +1,3 @@
+#!/bin/sh
+# Here, in docker build, we can modify files without reverting them afterwards
+# but on the other hand we're restricted to accessing only stuff in the build context
