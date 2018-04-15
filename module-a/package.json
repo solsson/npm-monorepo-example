@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "node ./index.spec.js",
-    "preshrinkwrap": "echo 'Pre-shrinkwrap!'",
-    "shrinkwrap": "echo 'Shrinkwrap!'",
-    "postshrinkwrap": "echo 'Post-shrinkwrap!'"
+    "preshrinkwrap": "echo 'Pre-shrinkwrap A!'",
+    "shrinkwrap": "echo 'Shrinkwrap A!'",
+    "postshrinkwrap": "echo 'Post-shrinkwrap A!'"
   },
   "author": "",
   "license": "ISC",

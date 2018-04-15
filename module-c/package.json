@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node ./index.spec.js"
+    "test": "node ./index.spec.js",
+    "preshrinkwrap": "echo 'Pre-shrinkwrap C!'",
+    "shrinkwrap": "echo 'Shrinkwrap C!'",
+    "postshrinkwrap": "echo 'Post-shrinkwrap C!'"
   },
   "author": "",
   "license": "ISC",
