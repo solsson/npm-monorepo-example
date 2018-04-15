@@ -1,2 +1,4 @@
 node_modules
 shrinkwrap.yaml
+# We do version package-lock.json but in this test module we can't because we evaluate different approaches to generating it
+package-lock.json
