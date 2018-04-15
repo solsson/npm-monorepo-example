@@ -31,9 +31,10 @@ In a monorepo context this means those of `file:../[sibling]` modules too.
 ## Use something else for dev
 
 We run `npm install --no-package-lock` for local development.
-(Another method would be a [postschrinkwrap](https://docs.npmjs.com/files/package-locks#description) that resets changes).
+~~(Another method would be a [postshrinkwrap](https://docs.npmjs.com/files/package-locks#description) that resets changes)~~
+we'll probably use --ignore-scripts when we (re)generate package-lock.json.
 Two problems with npm install for monorepo: slowness + disk usage.
-We might evaluate [pnpm](https://github.com/pnpm/pnpm) which by the way has its own schrinkwrap,
+We might evaluate [pnpm](https://github.com/pnpm/pnpm) which by the way has its own shrinkwrap,
 or even [rusn](https://www.npmjs.com/package/@microsoft/rush) or you name it.
 
 ## Prod install during docker build
