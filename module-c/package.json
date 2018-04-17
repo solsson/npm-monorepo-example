@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node ./index.spec.js"
+    "test": "node ./index.spec.js",
+    "prepare": "echo 'Prepare! Here we tend to do important stuff like transpile.'",
+    "preshrinkwrap": "echo 'Pre-shrinkwrap C!'",
+    "shrinkwrap": "echo 'Shrinkwrap C!'",
+    "postshrinkwrap": "echo 'Post-shrinkwrap C!'"
   },
   "author": "",
   "license": "ISC",

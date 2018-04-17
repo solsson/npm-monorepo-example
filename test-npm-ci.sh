@@ -7,4 +7,6 @@ LOCK_STRATEGY=./test-pnpm-lockfirst.sh
 cd module-a
 rm -r node_modules
 npm ci
+RESULT=$?
 cd ..
+exit $RESULT
