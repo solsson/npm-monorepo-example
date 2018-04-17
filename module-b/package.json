@@ -19,6 +19,7 @@
     "module-c": "file:../module-c"
   },
   "devDependencies": {
-    "wrappy": "1.0.2"
+    "wrappy": "1.0.2",
+    "module-c": "file:../module-c"
   }
 }
