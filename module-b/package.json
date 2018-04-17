@@ -16,7 +16,7 @@
     "walker": "1.0.7"
   },
   "peerDependencies": {
-    "module-c": "file:../module-c"
+    "module-c": "*"
   },
   "devDependencies": {
     "wrappy": "1.0.2",
