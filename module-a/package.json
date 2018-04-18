@@ -6,6 +6,8 @@
   "scripts": {
     "test": "node ./index.spec.js",
     "prepare": "echo 'Prepare! Here we tend to do important stuff like transpile.'",
+    "build-contract-predockerbuild": "./node_modules/.bin/build-contract-predockerbuild",
+    "build-contract-postdockerbuild": "./node_modules/.bin/build-contract-postdockerbuild",
     "preshrinkwrap": "echo 'Pre-shrinkwrap A!'",
     "shrinkwrap": "echo 'Shrinkwrap A!'",
     "postshrinkwrap": "echo 'Post-shrinkwrap A!'"
