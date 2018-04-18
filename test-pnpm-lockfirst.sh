@@ -5,17 +5,18 @@ function clean {
   rm -r node_modules
   rm package-lock.json
   rm shrinkwrap.yaml
+  rm -r npm-monorepo
 }
 
 cd module-c
 clean
-npm install --production --package-lock-only
+npm install --production --package-lock-only --ignore-scripts
 cd ../module-b
 clean
-npm install --production --package-lock-only
+npm install --production --package-lock-only --ignore-scripts
 cd ../module-a
 clean
-npm install --production --package-lock-only
+npm install --production --package-lock-only --ignore-scripts
 cd ../
 
 cd module-c
