@@ -3,7 +3,8 @@
 
 ```
 npm install -g npm@5.8.0
-npm install -g pnpm@1.40.1
+npm install -g pnpm@1.40.2
+npm install -g build-contract@1.3.0
 ```
 
 ## Design goals
@@ -41,3 +42,12 @@ or even [rusn](https://www.npmjs.com/package/@microsoft/rush) or you name it.
 
 With monorepo you can't have the entire repo as build context, as the context transfer would make all builds slow.
 This means that `file:../` dependencies need to be packaged to a location inside the top level module's folder.
+
+## Restriction: one level of monorepo dependencies
+
+There's "libs" and "servcies". Use `peerDependencies` to declare dependencies between libs,
+and let services do the `file:../'.
+This lets us write monorepo tooling without traversal of monorepo dependency graphs.
+It's also a quite useful practice because it encourages dependency injection:
+a lib might depend on some other lib's TypeScript types,
+but should typically have an API that gets the runtime dependency from the calling service.

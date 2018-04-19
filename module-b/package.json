@@ -13,10 +13,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "module-c": "file:../module-c",
     "walker": "1.0.7"
   },
+  "peerDependencies": {
+    "module-c": "*"
+  },
   "devDependencies": {
-    "wrappy": "1.0.2"
+    "wrappy": "1.0.2",
+    "module-c": "file:../module-c"
   }
 }

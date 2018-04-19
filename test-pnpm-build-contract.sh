@@ -9,21 +9,16 @@ function clean {
 }
 
 cd module-c
-clean
-npm install --production --package-lock-only --ignore-scripts
-cd ../module-b
-clean
-npm install --production --package-lock-only --ignore-scripts
-cd ../module-a
-clean
-npm install --production --package-lock-only --ignore-scripts
-cd ../
-
-cd module-c
+#clean
 pnpm install
 cd ../module-b
+#clean
 pnpm install
 cd ../module-a
+clean
+build-contract-predockerbuild
+npm install --production --package-lock-only --ignore-scripts
+build-contract-postdockerbuild
 pnpm install
 cd ../
 
