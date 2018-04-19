@@ -3,7 +3,8 @@
 
 ```
 npm install -g npm@5.8.0
-npm install -g pnpm@1.40.1
+npm install -g pnpm@1.40.2
+npm install -g build-contract@1.3.0
 ```
 
 ## Design goals
