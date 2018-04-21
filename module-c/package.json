@@ -13,7 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "sha.js": "2.4.11"
+    "sha.js": "2.4.11",
+    "walker": "1.0.6"
   },
   "devDependencies": {
     "once": "1.4.0"
