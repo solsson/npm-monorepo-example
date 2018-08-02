@@ -1,0 +1,24 @@
+{
+  "name": "standalone-module",
+  "version": "1.0.0",
+  "description": "zero monorepo deps",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./index.spec.js",
+    "prepare": "echo 'Prepare! Here we tend to do important stuff like transpile.'",
+    "build-contract-predockerbuild": "./node_modules/.bin/build-contract-predockerbuild",
+    "build-contract-postdockerbuild": "./node_modules/.bin/build-contract-postdockerbuild",
+    "packagelock": "./node_modules/.bin/build-contract-packagelock",
+    "preshrinkwrap": "echo 'Pre-shrinkwrap A!'",
+    "shrinkwrap": "echo 'Shrinkwrap A!'",
+    "postshrinkwrap": "echo 'Post-shrinkwrap A!'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "abbrev": "1.1.1"
+  },
+  "devDependencies": {
+    "yn": "2.0.0"
+  }
+}
